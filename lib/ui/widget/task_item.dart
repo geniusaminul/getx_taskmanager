@@ -126,6 +126,7 @@ class _TaskItemState extends State<TaskItem> {
   bool result = await controller.updateTask(value, widget.taskListModel.sId!);
 
     if (result) {
+      widget.onUpdateTask();
       if (mounted) {
         showSnackBarMessage(context, 'Update Task Success!');
       }
@@ -142,6 +143,7 @@ class _TaskItemState extends State<TaskItem> {
   bool result = await controller.deleteTask(widget.taskListModel.sId!);
 
     if (result) {
+      widget.onUpdateTask();
       if (mounted) {
         showSnackBarMessage(context, 'Delete Task Success!');
       }

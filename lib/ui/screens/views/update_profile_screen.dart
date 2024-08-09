@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
-
 import 'package:task_manager_assignment/ui/controller/auth_controller.dart';
 import 'package:task_manager_assignment/ui/controller/update_profile_task_controller.dart';
 import 'package:task_manager_assignment/ui/utilities/app_constant.dart';
