@@ -94,7 +94,7 @@ class _SignInScreenState extends State<SignInScreen> {
                     ),
                     GetBuilder<SignInController>(builder: (signInController) {
                       return Visibility(
-                        visible: signInController.signInProgress == false,
+                        visible: Get.find<SignInController>().signInProgress == false,
                         replacement: circularProgressIndicator(),
                         child: ElevatedButton(
                             onPressed: _onTapSignInButton,
