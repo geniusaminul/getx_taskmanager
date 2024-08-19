@@ -17,21 +17,6 @@ import 'package:task_manager_assignment/ui/controller/update_task_controller.dar
 class ControllerBinder extends Bindings {
   @override
   void dependencies() {
-    // Get.lazyPut(() => SignInController());
-    // Get.lazyPut(() => SignUpController());
-    // Get.lazyPut(() => NewTaskController());
-    // Get.lazyPut(() => TaskStatusCountController());
-    // Get.lazyPut(() => ProgressTaskController());
-    // Get.lazyPut(() => CompletedTaskController());
-    // Get.lazyPut(() => CancelTaskController());
-    // Get.lazyPut(() => AddNewTaskController());
-    // Get.lazyPut(() => UpdateProfileTaskController());
-    // Get.lazyPut(() => EmailVerifyController());
-    // Get.lazyPut(() => PinVerifyController());
-    // Get.lazyPut(() => SetPasswordController());
-    // Get.lazyPut(() => UpdateTaskController());
-    // Get.lazyPut(() => DeleteTaskController());
-
     Get.put(SignInController());
     Get.put(SignUpController());
     Get.put( NewTaskController());
