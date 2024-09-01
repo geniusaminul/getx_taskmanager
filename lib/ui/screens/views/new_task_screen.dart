@@ -44,7 +44,7 @@ class _NewTaskScreenState extends State<NewTaskScreen> {
                       builder: (newTaskController) {
                         return Visibility(
                           visible:
-                          Get.find<NewTaskController>().newTaskListInProgress == false,
+                          newTaskController.newTaskListInProgress == false,
                           replacement: const Center(
                             child: CircularProgressIndicator(),
                           ),
@@ -52,7 +52,7 @@ class _NewTaskScreenState extends State<NewTaskScreen> {
                             itemCount: Get.find<NewTaskController>().newTaskList.length,
                             itemBuilder: (context, index) {
                               return TaskItem(
-                                taskListModel: Get.find<NewTaskController>().newTaskList[index],
+                                taskListModel: newTaskController.newTaskList[index],
                                 onUpdateTask: _initialCall,
 
                               );
@@ -77,10 +77,10 @@ class _NewTaskScreenState extends State<NewTaskScreen> {
   Widget _buildTaskSummarySection() {
     return Padding(
       padding: const EdgeInsets.fromLTRB(16, 16, 0, 16),
-      child: GetBuilder<TaskStatusCountController>(
+      child: GetBuilder<TaskStatusCountController>( 
           builder: (taskStatusCountController) {
             return Visibility(
-              visible: Get.find<TaskStatusCountController>().taskStatusCountInProgress == false,
+              visible: taskStatusCountController.taskStatusCountInProgress == false,
               replacement: const Center(
                 child: CircularProgressIndicator(),
               ),

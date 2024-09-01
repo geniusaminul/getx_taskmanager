@@ -30,9 +30,7 @@ class _ProgressTaskScreenState extends State<ProgressTaskScreen> {
         child: GetBuilder<ProgressTaskController>(
             builder: (progressTaskController) {
           return Visibility(
-            visible:
-                Get.find<ProgressTaskController>().progressTaskInProgress ==
-                    false,
+            visible: progressTaskController.progressTaskInProgress == false,
             replacement: const Center(
               child: CircularProgressIndicator(),
             ),

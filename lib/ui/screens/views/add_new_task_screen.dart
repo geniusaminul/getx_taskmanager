@@ -75,7 +75,7 @@ class _AddNewTaskScreenState extends State<AddNewTaskScreen> {
                     GetBuilder<AddNewTaskController>(
                         builder: (addNewTaskController) {
                       return Visibility(
-                        visible: Get.find<AddNewTaskController>().createdNewTaskInProgress == false,
+                        visible: addNewTaskController.createdNewTaskInProgress == false,
                         replacement: const Center(
                           child: CircularProgressIndicator(),
                         ),

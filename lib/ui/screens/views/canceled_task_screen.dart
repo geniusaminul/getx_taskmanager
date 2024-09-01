@@ -29,7 +29,7 @@ class _CanceledTaskScreenState extends State<CanceledTaskScreen> {
         child:
             GetBuilder<CancelTaskController>(builder: (cancelTaskController) {
           return Visibility(
-            visible: Get.find<CancelTaskController>().cancelInProgress == false,
+            visible: cancelTaskController.cancelInProgress == false,
             replacement: const Center(
               child: CircularProgressIndicator(),
             ),

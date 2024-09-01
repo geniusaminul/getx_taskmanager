@@ -30,8 +30,7 @@ class _CompleteTaskScreenState extends State<CompleteTaskScreen> {
         child: GetBuilder<CompletedTaskController>(
             builder: (completedTaskController) {
           return Visibility(
-            visible: Get.find<CompletedTaskController>().completedInProgress ==
-                false,
+            visible: completedTaskController.completedInProgress == false,
             replacement: const Center(
               child: CircularProgressIndicator(),
             ),
